@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title> Economic condition, license application and Unemployment rate</title>
+  <a name="top"></a>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,500,400,300,200,100,400italic0&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'>
+
+  <style>
+  * { font-family: 'Open Sans', sans-serif; }
+  body {margin: 0% 10%;}
+
+  ul.nav {
+  margin: 15px;
+  padding: 0px;
+  background-color: darkred
+}
+
+ul.nav li { display: inline; }
+ul.nav li a{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px
+  text-decoration: none;
+  color: white;
+  align: left;
+}
+ul.nav li a:hover {
+  background-color: #555;
+  transition: 0.2s;
+}
+ul.nav li a.active{
+  color: darkred;
+  background-color: #FFF;
+  font-weight: bold;
+}
+ul.nav li:hover{
+  background-color: #555;
+  transition: 0.2s;
+}
+img {
+  border: 2px;
+  border-style: solid;
+  border-color: darkred;
+  margin: 15px 15px;
+}
+table {
+  align: center;
+  border-bottom: 0px 0px 5px 10px;
+  border-style: solid;
+  border-color: darkred;
+  background: #eee;
+  padding: 0px;
+  border-spacing: 0px;
+  color: pink;
+}
+
+th {
+  color: white;
+  background-color: darkred;
+}
+th, td {
+  text-align:left;
+  padding: 2px 15px;
+}
+
+h1 {
+  color: darkred;
+}
+
+</style>
+</head>
+<body>
+
+  <ul class="nav">
+    <li><a href="#Introduction" class="active">Introduction</a></li>
+    <li><a href="#Single Data Analysis"<em>Single Data Analysis</em></a></li>
+    <li><a href="#Merge Regression"<em>Merge Regression</em></a></li>
+  </ul>
+
+<section>
+  <h1>Summary of Our Project</h1>
+
+
+  <img src="http://www.gordon-fiddes-robertson.com/wp-content/uploads/2014/03/economic-trend.jpg" width="35%" hight="35%" align="right">
+
+  <p>The overall national business cycle could be shown in many different things. Based on our assumption,a slump economy would have following characteristics:</p>
+  <p>1. fewer busiensses operate</p>
+  <p>2. unemployment rate increase</p>
+  <p>3. wage decreases</p>
+  <p>4. spending decreases</p>
+  <p>5. tax decreases etc.</p>
+  <p>A boom would face opposite phenomenon. In our project, we would only focus on the previous two factors that is the number of operating businesses and the unemployment rate. We use stock price as an indicator of the national business cycle, and the number of business license application as the indicator for number of operating businesses. We choose the city of Chicago as a sample representing the overall economic behavior of United State, and with data analysis, we try to figure out whether the two factors have the relationships with the national business cycle as what we assumed. However, based on the result of the regression, we find that there is no significant relationship between stock price and license application</p>
+</section>
+
+<section>
+  <h1>Summary of Our Findings</h1>
+  <p> As most of people will assume when the stock market price goes up indicates the economy is good, therefore the number of business license application should also increase. However, in our regression analysis we found the opposite relationship</p>
+  <p> We found significant negative relationship between HIGH stock market price and the number of license application. Which means when the stock market goes up, there is less business license application.</p>
+  <p> We also found significant positive relationship between LOW stock market price and the number of license application. Which means when the stock market goes down, there is more business license application.</p>
+  <p> This finding is totally different than what we imagined, therefore we can expect when the stock market is not doing well, people change their behavior to open more businesses, therefore we observe more business license application when the stock market price goes down.</p>
+
+</section>
+<section>
+  <h1>Process of Our Project</h1>
+  <img src="http://www.humanengineers.com/wp-content/uploads/2017/09/Process.jpg" width="50%" hight="35%" align="left" >
+  <p>We started with single data analyzation. We first went through the stock price data, to find out the trend of national economy for the recent 15 years.</p>
+  <p>Then we started to look at the licensing data. To match the stock price data, we also chose the time range from 2003 to 2017. Among the 15 years, we randomly chose five yeras for detail analyzation. These years are: year 2003, year 2006, year 2011, year 2013 and year 2017</p>
+  <p>We ended the single data analyzation with the yearly trend of unemployment rate based on unemployment data.
+  <p>Finishing the single data analyzation, we started to merge the datasets and start the regression. The result of each step would be shown in the Single Data Analysis and Merge1 Regression.
+  <p>Due to curiosity we also repeat the process for a 5-year analysis, the result is slightly different.
+</section>
