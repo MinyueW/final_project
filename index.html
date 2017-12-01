@@ -52,7 +52,6 @@ table {
   background: #eee;
   padding: 0px;
   border-spacing: 0px;
-  color: pink;
 }
 
 th {
@@ -68,14 +67,22 @@ h1 {
   color: darkred;
 }
 
+h2 {
+  color: black;
+}
+
+h3 {
+  color: black;
+}
 </style>
 </head>
 <body>
 
   <ul class="nav">
     <li><a href="#Introduction" class="active">Introduction</a></li>
-    <li><a href="#Single Data Analysis"<em>Single Data Analysis</em></a></li>
-    <li><a href="#Merge Regression"<em>Merge Regression</em></a></li>
+    <li><em><a href=https://minyuew.github.io/web-final-1/>Fifteen-Year Analysis</a>.</em></li>
+    <li><em><a href=https://minyuew.github.io/web-final-2/>Five-Year Analysis</a>.</em></li>
+    <li><em><a href=https://minyuew.github.io/gis-final//>Licensing GIS Map</a>.</em></li>
   </ul>
 
 <section>
@@ -90,23 +97,86 @@ h1 {
   <p>3. wage decreases</p>
   <p>4. spending decreases</p>
   <p>5. tax decreases etc.</p>
-  <p>A boom would face opposite phenomenon. In our project, we would only focus on the previous two factors that is the number of operating businesses and the unemployment rate. We use stock price as an indicator of the national business cycle, and the number of business license application as the indicator for number of operating businesses. We choose the city of Chicago as a sample representing the overall economic behavior of United State, and with data analysis, we try to figure out whether the two factors have the relationships with the national business cycle as what we assumed. However, based on the result of the regression, we find that there is no significant relationship between stock price and license application</p>
+  <p>A boom would face opposite phenomenon. In our project, we would only focus on the previous two factors that is the number of operating businesses and the unemployment rate. We use stock price as an indicator of the national business cycle, and the number of business license application as the indicator for number of operating businesses. We choose the city of Chicago as a sample representing the overall economic behavior of United State, and with data analysis, we try to figure out whether the two factors have the relationships with the national business cycle as what we assumed. However, based on the result of the regression, we find that there is significant relationship between stock price and license application</p>
 </section>
 
-<section>
-  <h1>Summary of Our Findings</h1>
-  <p> As most of people will assume when the stock market price goes up indicates the economy is good, therefore the number of business license application should also increase. However, in our regression analysis we found the opposite relationship</p>
-  <p> We found significant negative relationship between HIGH stock market price and the number of license application. Which means when the stock market goes up, there is less business license application.</p>
-  <p> We also found significant positive relationship between LOW stock market price and the number of license application. Which means when the stock market goes down, there is more business license application.</p>
-  <p> This finding is totally different than what we imagined, therefore we can expect when the stock market is not doing well, people change their behavior to open more businesses, therefore we observe more business license application when the stock market price goes down.</p>
 
-</section>
 <section>
   <h1>Process of Our Project</h1>
   <img src="http://www.humanengineers.com/wp-content/uploads/2017/09/Process.jpg" width="50%" hight="35%" align="left" >
   <p>We started with single data analyzation. We first went through the stock price data, to find out the trend of national economy for the recent 15 years.</p>
   <p>Then we started to look at the licensing data. To match the stock price data, we also chose the time range from 2003 to 2017. Among the 15 years, we randomly chose five yeras for detail analyzation. These years are: year 2003, year 2006, year 2011, year 2013 and year 2017</p>
-  <p>We ended the single data analyzation with the yearly trend of unemployment rate based on unemployment data.
-  <p>Finishing the single data analyzation, we started to merge the datasets and start the regression. The result of each step would be shown in the Single Data Analysis and Merge1 Regression.
-  <p>Due to curiosity we also repeat the process for a 5-year analysis, the result is slightly different.
+  <p>We ended the single data analyzation with the yearly trend of unemployment rate based on unemployment data.</p>
+  <p>Finishing the single data analyzation, we started to merge the datasets and start the regression. The result of each step would be shown seperatly with fifteen years analysis and five years analysis.</p>
+  <p>Due to curiosity we also repeat the process for a 5-year analysis, the result is slightly different.</p>
+  <p>Finally, we used GIS in Pandas to plot the map of business license application of Chicago, we want to find out what kind of areas have more business application.</p>
+</section>
+
+<section>
+  <h1>Summary of Our Findings</h1>
+  <table>
+    <tr><th>Data</th>        <th>Significant Relationship</th></tr>
+    <tr><td>Business License and Stock Price</td>       <td>YES</td></tr>
+    <tr><td>Unemployment rate and Stock Price</td>     <td>YES</td></tr>
+    <tr><td>Business license and Unemployment rate</td>  <td>NO</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Single Data Analyzation</h2>
+  <h3>Stock Market Price Data</h3>
+  <p>We used the stock price to indicate current economic conditions. If the stock price is high, we assume we are in a good economic condition, if the stock price is low, we assume we are probability experiencing some recession. </p>
+  <p>We plotted the stock market price, and observed the stock market price is going up in general, except the dramatic decrease around 2008 great depression. </p>
+  <p>During 2003 to 2017, the stock price highest date is 9/9/2016, and the lowest date is 1/10/2003.</p>
+
+  <h3> Business License Data</h3>
+  <p>The business licenses data includes business activity, application type, and date of application. We randomly chose five years to do a detail analysis. (2017, 2013, 2011, 2006, 2003)</p>
+  <table>
+    <tr><th>Year</th>        <th>No. of application</th>       <th>Issued</th>        <th>Renewed</th></tr>
+    <tr><td>2017</td>       <td>8551</td>        <td>7998</td>        <td>1</td></tr>
+    <tr><td>2013</td>       <td>9139</td>        <td>8628</td>        <td>0</td></tr>
+    <tr><td>2011</td>       <td>3498</td>        <td>3367</td>        <td>0</td></tr>
+    <tr><td>2006</td>       <td>2876</td>        <td>2760</td>        <td>0</td></tr>
+    <tr><td>2003</td>       <td>11279</td>        <td>3036</td>        <td>8134</td></tr>
+  </table>
+
+  <h3>Unemployment Data</h3>
+  <p>We plotted the unemployment data of all years, therefore we can see both recent 5 years trend and past 15 years trend. For all years from 1990 to 2015, the highest unemployment rate is 12.6%, happened in 1/1/2010. The lowest unemployment rate is 4.5%, happened 10/1/2006 and 3/1/2017.</P>
+  <p>Then, we took a look at the recent 15 years unemployment rate, the highest unemployment rate is still 12.6%, and happened in 1/1/2010, the lowest unemployment rate is 4.5%, and happened in 10/1/2006 and 3/1/2017.</p>
+  <p>For the five year analysis, the highest unemployment rate is on 9/1/2013, which is 11.1%, and the lowest is on 3.1.2017 which is 4.5%
+</section>
+
+<section>
+  <h2>Multiple Data Analyzation</h2>
+  <h3>Business License and Stock Market</h3>
+  <p>Business license data and stock market data have significant relationship both in recent 15 years and 5 years.</p>
+  <p>For the fifteen years analysis, we found there is a positive relationship between business license application and stock market price both in the high price and low price. When the stock market price change, the business license application also changes by 0.0016. From the p-value we can see there is statistical significant relationship, but the coefficient is very small, thus when we plot the relationship with regression line, we cannot observe much angle on the regression line. </p>
+  <p>The result is similar for the recent 5 years. </p>
+  <p> As most of people will assume when the stock market price goes up indicates the economy is good, therefore the number of business license application should also increase. This assumption is confirmed by our analysis, though the small coefficient indicate the influence is not strong</p>
+  <p> We found significant positive relationship between HIGH stock market price and the number of license application. Which means when the stock market goes up, there is more business license application.</p>
+  <p> We also found significant positive relationship between LOW stock market price and the number of license application. Which means when the stock market goes up, there is more business license application.</p>
+  <p> This finding verifies the our assumption on the relationship of business cycle and number of businesses. When the economic condition is good, people are more likely to invest.</p>
+
+  <h3> Unemployment rate and Stock Market</h3>
+  <p>Unemployment and stock price have significant negative relationship both in fifteen years and five years analysis. </p>
+  <p>As the high stock price goes up, the unemployment rate goes down.</p>
+  <p>As the low stock price goes up, the unemployment rate goes down.</p>
+  <p>This is same as what we predicted, when the stock market is doing good, and the stock price goes up, we can conclude the economy is doing well at the same time. Therefore, when economy environment is good, businesses are more likely to invest more, thus to hire more employees, and unemployment rate goes down. We plotted the regression, and we see clearly angle in the graph, and shows the stock market price goes up, the unemployment rate goes down. </p>
+
+  <h3>Business License and Unemployment Rate</h3>
+  <p>We found NO significant relationship between unemployment rate and business license application. </p>
+  <p>We used to think while the business license application increase, means employers will hire more employees, therefore when business license application goes up, we should observe unemployment rate goes down. However, our analysis tells us differently, business license application has no effect on the unemployment rate.</p>
+  <p>First of all, the number of bussinesses though goes up with upward sloping economy, the influence is not strong. Further, one possible fact is that many of the businesses are in really small size and the requirement for staff is not high enough to change the unemployment rate. 
+  <h3>Business License, Stock Market, and Unemployment Rate</h3>
+  <p>We run all there datasets together, so we can hold one of the dataset fixed while analyzing the other one, we got the same result as the analysis above:</P>
+  <p>This step further confirmed our analysis above, and concluded that there is significant relationship between unemployment and stock market price, but there is no relationship between unemployment and license application.</p>
+</section>
+
+<section>
+  <h2>GIS Map Analysis</h2>
+  <p>We graph the number of license application with geographic map of Chicago. We colored it from white to dark red to represent the amount of business license application from minimum 56 to maximum 439. </p>
+  <p>We assumed the highest number of business application area should be at Chicago downtown or the loop area. However, we found something different.</p>
+  <p>The Chicago downtown area is only light pink colored, which indicates this area the license applications are less than 200, compare to the 439 as maximum. Further more, the area surrounding Chicago downtown are all white colored, including the south loop area is also nearly white colored, which means, these areas are the lowest business license application area. </p>
+  <p>The highest application area, the only dark red area, is the area nearby South lake shore drive, and right in front of Hyde Park. This area is the Oakland and Kenwood area, including Graveland Park, Ellis Park, Chamberlain Triangle Park, and Kenwood Park. </P>
+  <p>Therefore, we conclude probably because of the limited space and high rent price in downtown area, business in recent years are moving to the area outside of downtown Chicago, we observe more business open in areas other than downtown Chicago. </p>
 </section>
